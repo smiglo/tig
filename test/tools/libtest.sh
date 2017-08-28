@@ -707,7 +707,7 @@ run_test_cases()
 		fi
 
 		assert_equals "$name.screen" < "$name.expected"
-		if [ -s "$name.stderr" ]; then
+		if [ -s "$name-assert-stderr" ]; then
 			assert_equals "$name.stderr" < "$name-assert-stderr"
 		else
 			assert_equals "$name.stderr" < /dev/null
